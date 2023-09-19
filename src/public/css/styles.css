@@ -1,0 +1,290 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #abaaaa6e;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+.precios {
+    font-size: 18px;
+}
+
+.articulo-main,
+.descuentos,
+h4 {
+    font-size: 16px;
+}
+
+p {
+    font-size: 16px;
+}
+
+header {
+    background-color: #EAC926;
+}
+
+div .top-header {
+    padding: 5px;
+}
+
+header div .logo {
+    width: 50%;
+    padding: 10px;
+}
+
+header nav {
+    font-size: 16px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+
+.search-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+#search-input {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+#search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+#search-button:hover {
+    background-color: #555;
+}
+
+.top-header p {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.burger-menu i {
+    background-color: #0044AA;
+    color: #FFF;
+    font-size: 20px;
+    max-width: 50px;
+    padding: 15px 15px;
+    margin: 10px 0px 20px 0px;
+    border-radius: 8px;
+}
+
+.burger-menu {
+    text-align: center;
+}
+
+main {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main section article {
+    padding: 10px;
+    border: solid 1px #ebebeb;
+    margin: 15px;
+    background-color: #fff;
+    flex-grow: 1;
+
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.articulo {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+main section .productos div i,
+.descuentos {
+    color: #39b54a;
+}
+
+main section article img {
+    width: 100%;
+}
+
+main section article div i {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+main section article div {
+    position: relative;
+}
+
+h3,
+.descripcion {
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    background-color: white;
+}
+
+footer .des-footer i {
+    color: #1259c3;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+footer section {
+    margin-bottom: 10px;
+}
+
+/* Mobile */
+@media(max-width: 767px) {
+    main section article div h4 {
+        display: none;
+    }
+
+    header nav {
+        display: none;
+    }
+}
+
+/* Tablet */
+@media(min-width: 768px) {
+    main article {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    article {
+        justify-content: space-between;
+    }
+
+    .productos{
+        flex-wrap: nowrap;
+    }
+
+    header nav {
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 20px;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    li {
+        margin-right: 25px;
+    }
+}
+
+/* Desktop */
+@media(min-width: 1024px) {
+    main article {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .productos {
+        flex-wrap: nowrap;
+    }
+
+    .search-container {
+        display: flex;
+        margin-left: 350px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .top-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .top-header p {
+        display: flex;
+        margin-left: 250px;
+        align-items: center;
+    }
+
+    header nav {
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 20px;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    li {
+        margin-right: 25px;
+    }
+    .articulo-main{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .precios {
+        flex-basis: 30%;
+    }
+    
+    .descuentos {
+        flex-basis: 70%;
+    }
+}
