@@ -44,8 +44,13 @@ header nav {
     font-size: 16px;
 }
 
-ul{
+ul {
     list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
 }
 
 
@@ -57,7 +62,7 @@ ul{
 
 #search-input {
     padding: 10px;
-    width: 300px;
+    width: 200px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -119,14 +124,12 @@ main section article {
     border: solid 1px #ebebeb;
     margin: 15px;
     background-color: #fff;
-    flex-grow: 1;
-
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .productos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .articulo {
@@ -157,6 +160,7 @@ main section article div i {
     position: absolute;
     right: 20px;
     top: -15px;
+    transition: transform 0.3s ease;
 }
 
 main section article div {
@@ -183,21 +187,76 @@ footer section {
     margin-bottom: 10px;
 }
 
-/* Mobile */
-@media(max-width: 767px) {
-    main section article div h4 {
-        display: none;
-    }
+main section article div h4 {
+    display: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
 
-    header nav {
-        display: none;
-    }
+header nav {
+    display: none;
+}
+
+
+/* Estilos para Register y login */
+form {
+    border: solid 3px black;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #d1bb4e;
+}
+
+.registro-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-check {
+    flex-basis: 50%;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
 }
 
 /* Tablet */
-@media(min-width: 768px) {
-    main article {
+@media(min-width: 768px) and (max-width: 1439px) {
+    main section article {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        margin-bottom: 20px;
     }
 
     .burger-menu {
@@ -208,14 +267,15 @@ footer section {
         justify-content: space-between;
     }
 
-    .productos{
-        flex-wrap: nowrap;
+    .producto {
+        width: 45%;
     }
 
     header nav {
         display: flex;
         justify-content: space-around;
         padding-bottom: 20px;
+        margin-top: 15px;
     }
 
     ul {
@@ -226,12 +286,27 @@ footer section {
     li {
         margin-right: 25px;
     }
+
+    #search-input {
+        width: 300px;
+    }
+
+    main section article div h4 {
+        display: block;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    form {
+        margin: 115px;
+    }
 }
 
 /* Desktop */
-@media(min-width: 1024px) {
-    main article {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+@media(min-width: 1440px) {
+    main section article:hover {
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        /* Aumenta la sombra al pasar el mouse */
+        transform: translateY(-5px);
+        /* Levanta ligeramente el artículo */
     }
 
     .burger-menu {
@@ -240,13 +315,18 @@ footer section {
 
     .productos {
         flex-wrap: nowrap;
+        width: 100%;
     }
 
     .search-container {
         display: flex;
-        margin-left: 350px;
+        margin-left: 370px;
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+
+    #search-input {
+        width: 300px;
     }
 
     .top-header {
@@ -275,7 +355,8 @@ footer section {
     li {
         margin-right: 25px;
     }
-    .articulo-main{
+
+    .articulo-main {
         display: flex;
         flex-wrap: wrap;
     }
@@ -283,8 +364,29 @@ footer section {
     .precios {
         flex-basis: 30%;
     }
-    
+
     .descuentos {
         flex-basis: 70%;
+    }
+
+    footer .footer-sec {
+        display: flex;
+        padding: 15px 0px 15px 0px;
+    }
+
+    footer section .des-footer {
+        margin: auto;
+    }
+
+    main section article:hover i {
+        transform: rotate(-90deg);
+    }
+
+    main section article:hover h4 {
+        display: block;
+        opacity: 1;
+    }
+    form {
+        margin: 115px;
     }
 }

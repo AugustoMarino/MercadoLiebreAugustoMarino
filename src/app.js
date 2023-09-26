@@ -13,6 +13,10 @@ app.get("/login", (req, res) => {
     res.sendFile(path.join(__dirname, "/views/login.html") );
 });
 
+app.get("/register", (req, res) => {
+    res.sendFile(path.join(__dirname, "/views/register.html") );
+});
+
 const port = process.env.PORT || 3030;
 app.listen(port, () => {
     console.log(`Escuchando en el puerto ${port}`);
